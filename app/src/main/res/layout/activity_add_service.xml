@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/whitedark"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_circle">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="15dp">
+
+            <rw.limitless.limitlessapps.ussd.Textview_Bold
+                android:id="@+id/titleviewpage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="New Service"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/savedata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="7dp"
+                    android:text="Save"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/whitedark"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/simcard"
+                    app:civ_border_color="@color/darker_gray"
+                    app:civ_border_width="1dp" />
+
+                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                    android:id="@+id/operatorname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="MTN Rwanda"
+                    android:textColor="@color/buttongray"
+                    android:textSize="18dp" />
+
+                <rw.limitless.limitlessapps.ussd.TextView_Medium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="(Change operator)"
+                    android:textColor="@color/buttongray"
+                    android:textSize="15dp"
+                    android:id="@+id/phoneno"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/service_owner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@color/buttongray"
+                        android:hint="Service owner"
+                        android:textColor="@color/buttongray"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@color/buttongray"
+                        android:hint="Title"
+                        android:textColor="@color/buttongray"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@color/buttongray"
+                        android:hint="Decription"
+                        android:textColor="@color/buttongray"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/darker_gray"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <rw.limitless.limitlessapps.ussd.Textview_Bold
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Build USSD url (This will allow user to use your service by only single click)"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<EditText-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="2"-->
+                        <!--android:background="@android:color/transparent"-->
+                        <!--android:backgroundTint="@color/buttongray"-->
+                        <!--android:focusable="false"-->
+                        <!--android:gravity="center"-->
+                        <!--android:hint="*"-->
+                        <!--android:textColor="@color/buttongray"-->
+                        <!--android:textSize="30dp"-->
+                        <!--android:textStyle="bold" />-->
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/coderequired"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:background="@android:color/transparent"-->
+                        <!--android:backgroundTint="@color/buttongray"-->
+                        <!--android:gravity="center"-->
+                        <!--android:hint="-&#45;&#45;(eg: 131)"-->
+                        <!--android:textColor="@color/buttongray"-->
+                        <!--android:textSize="17dp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:inputType="number"/>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="2"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<LinearLayout-->
+                            <!--android:id="@+id/add_new_layout"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--&gt;-->
+
+                            <!--<ImageButton-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:background="@android:color/transparent"-->
+                                <!--android:src="@drawable/new_row"-->
+                                <!--android:id="@+id/add_new"/>-->
+
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:id="@+id/delete_form_layout">-->
+
+                            <!--<ImageButton-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:background="@android:color/transparent"-->
+                                <!--android:src="@drawable/delete"-->
+                                <!--android:id="@+id/delete"/>-->
+
+                        <!--</LinearLayout>-->
+
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/darker_gray" />
+
+                <LinearLayout
+                    android:id="@+id/parent_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/coderequired"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="@color/buttongray"
+                            android:gravity="center"
+                            android:hint="---(eg: 131)"
+                            android:textColor="@color/buttongray"
+                            android:textSize="17dp"
+                            android:textStyle="bold"/>
+
+                        </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="@color/buttongray"
+                            android:gravity="center"
+                            android:hint="---(eg: 131)"
+                            android:textColor="@color/buttongray"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            android:layout_weight="2"
+                            android:visibility="gone"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/oldtype_spinner"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:entries="@array/array_name"
+                                android:gravity="right" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/delete_form_layout"
+                                android:layout_weight="2">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/delete"
+                                    android:onClick="onDelete"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/darker_gray" />
+
+                <Button
+                    android:id="@+id/add_field_button"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/button_action_color"
+                    android:layout_gravity="end"
+                    android:onClick="onAddField"
+                    android:textColor="#FFF"
+                    android:text="Add Field"
+                    android:paddingLeft="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

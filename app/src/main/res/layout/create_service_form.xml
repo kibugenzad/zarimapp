@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_item">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/coderequired"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@color/buttongray"
+            android:gravity="center"
+            android:textColor="@color/buttongray"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/type_spinner"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:entries="@array/array_name"
+                android:gravity="right" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/delete_form_layout"
+                android:layout_weight="2"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/delete"
+                    android:onClick="onDelete"
+                    android:id="@+id/delete"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/add_layout"
+                android:layout_weight="2">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/new_row"
+                    android:onClick="onDelete"
+                    android:id="@+id/add"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

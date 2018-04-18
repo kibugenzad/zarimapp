@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/roun_rect_gray"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="10dp"
+                android:hint="Search Contact.."
+                android:padding="6dp"
+                android:textColor="@color/buttongray"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/contacts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:longClickable="true"
+                android:scrollbars="vertical" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/avatar"
+                        app:civ_border_color="@color/darker_gray"
+                        app:civ_border_width="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/details"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingBottom="5dp"
+                                    android:text="Kibugenza Didier"
+                                    android:textColor="@color/buttongray"
+                                    android:textSize="16dp" />
+
+                                <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="MTN Rwanda"
+                                    android:textColor="@color/text_black_grey"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/info_outline" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/darker_gray" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/avatar"
+                        app:civ_border_color="@color/darker_gray"
+                        app:civ_border_width="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/details"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingBottom="5dp"
+                                    android:text="Christian Abayisenga"
+                                    android:textColor="@color/buttongray"
+                                    android:textSize="16dp" />
+
+                                <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="MTN Rwanda"
+                                    android:textColor="@color/text_black_grey"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/info_outline" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/darker_gray" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/avatar"
+                        app:civ_border_color="@color/darker_gray"
+                        app:civ_border_width="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/details"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingBottom="5dp"
+                                    android:text="Aristote Kate"
+                                    android:textColor="@color/buttongray"
+                                    android:textSize="16dp" />
+
+                                <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="MTN Rwanda"
+                                    android:textColor="@color/text_black_grey"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/info_outline" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/darker_gray" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/avatar"
+                        app:civ_border_color="@color/darker_gray"
+                        app:civ_border_width="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/details"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingBottom="5dp"
+                                    android:text="Patrick Nizeyimana"
+                                    android:textColor="@color/buttongray"
+                                    android:textSize="16dp" />
+
+                                <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Airtel Rwanda"
+                                    android:textColor="@color/text_black_grey"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/info_outline" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/darker_gray" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/avatar"
+                        app:civ_border_color="@color/darker_gray"
+                        app:civ_border_width="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/details"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingBottom="5dp"
+                                    android:text="Alain Fundi"
+                                    android:textColor="@color/buttongray"
+                                    android:textSize="16dp" />
+
+                                <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="TIGO Rwanda"
+                                    android:textColor="@color/text_black_grey"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/info_outline" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/darker_gray" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/avatar"
+                        app:civ_border_color="@color/darker_gray"
+                        app:civ_border_width="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/details"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingBottom="5dp"
+                                    android:text="Mazimpaka Yves"
+                                    android:textColor="@color/buttongray"
+                                    android:textSize="16dp" />
+
+                                <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="MTN Rwanda"
+                                    android:textColor="@color/text_black_grey"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/info_outline" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/darker_gray" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/avatar"
+                        app:civ_border_color="@color/darker_gray"
+                        app:civ_border_width="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/details"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingBottom="5dp"
+                                    android:text="Gatera Limitless"
+                                    android:textColor="@color/buttongray"
+                                    android:textSize="16dp" />
+
+                                <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="MTN Rwanda"
+                                    android:textColor="@color/text_black_grey"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/info_outline" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/darker_gray" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/avatar"
+                        app:civ_border_color="@color/darker_gray"
+                        app:civ_border_width="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/details"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingBottom="5dp"
+                                    android:text="Uwase Noela"
+                                    android:textColor="@color/buttongray"
+                                    android:textSize="16dp" />
+
+                                <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="TIGO Rwanda"
+                                    android:textColor="@color/text_black_grey"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/info_outline" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/darker_gray" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/avatar"
+                        app:civ_border_color="@color/darker_gray"
+                        app:civ_border_width="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/details"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingBottom="5dp"
+                                    android:text="Boss"
+                                    android:textColor="@color/buttongray"
+                                    android:textSize="16dp" />
+
+                                <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="MTN Rwanda"
+                                    android:textColor="@color/text_black_grey"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/info_outline" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="rw.limitless.limitlessapps.ussd.ProductInformation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_circle">
+
+                <ImageButton
+                    android:id="@+id/back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back" />
+
+            </LinearLayout>
+
+            <rw.limitless.limitlessapps.ussd.Textview_Bold
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:singleLine="true"
+                android:text="Product (USSD) Information"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/background" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:errorEnabled="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="@color/buttongray"
+                            android:hint="*"
+                            android:paddingRight="53dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/buttongray"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:focusable="false"/>
+
+                        <EditText
+                            android:id="@+id/shortcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="@color/buttongray"
+                            android:hint="---"
+                            android:paddingRight="53dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/buttongray"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:gravity="center"/>
+
+                        <EditText
+                            android:id="@+id/hash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="@color/buttongray"
+                            android:hint="#"
+                            android:paddingRight="53dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/buttongray"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:focusable="false"/>
+
+                    </LinearLayout>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/darker_gray"
+                android:id="@+id/shortcode_view"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Regurator Details"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <EditText
+                    android:id="@+id/nameregulator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@color/buttongray"
+                    android:hint="Name of regurator"
+                    android:textColor="@color/buttongray"
+                    android:textStyle="bold" />
+
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/darker_gray"
+                android:id="@+id/nameregulator_view"/>
+
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@color/buttongray"
+                    android:hint="Email"
+                    android:textColor="@color/buttongray"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:inputType="textEmailAddress"/>
+
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/darker_gray"
+                android:id="@+id/email_view"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Upload Folder"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp">
+
+                <EditText
+                    android:id="@+id/uploadfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@color/buttongray"
+                    android:focusable="false"
+                    android:hint="Copy of USSD authorisation/proof of payment"
+                    android:textColor="@color/buttongray"
+                    android:textSize="17dp"
+                    android:textStyle="bold"/>
+
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/darker_gray"
+                android:id="@+id/proof_view"/>
+
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@color/buttongray"
+                    android:hint="Service Provider (SP)"
+                    android:textColor="@color/buttongray"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:id="@+id/serviceprovider"/>
+
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/darker_gray"
+                android:id="@+id/serviceprovider_view"/>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/reound_rect_yellow"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

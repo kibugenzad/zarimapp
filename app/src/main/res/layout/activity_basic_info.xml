@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="rw.limitless.limitlessapps.ussd.BasicInfo"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back"
+                    android:id="@+id/back"/>
+
+            </LinearLayout>
+
+            <rw.limitless.limitlessapps.ussd.Textview_Bold
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Basic Info"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/background"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/countrylayout">
+
+        <rw.limitless.limitlessapps.ussd.Textview_Bold
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Country: "
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:layout_weight="1"
+            android:alpha = ".5"/>
+
+        <rw.limitless.limitlessapps.ussd.Textview_Bold
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Rwanda"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:layout_weight="1"
+            android:alpha = ".3"
+            android:id="@+id/country"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <rw.limitless.limitlessapps.ussd.Textview_Bold
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Active Number: "
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:layout_weight="1"
+            android:alpha = ".5"/>
+
+        <rw.limitless.limitlessapps.ussd.Textview_Bold
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="+250787393488"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:layout_weight="1"
+            android:alpha = ".3"
+            android:id="@+id/phone"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <rw.limitless.limitlessapps.ussd.Textview_Bold
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Carrier: "
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:layout_weight="1"
+            android:alpha = ".5"/>
+
+        <rw.limitless.limitlessapps.ussd.Textview_Bold
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="MTN Rwanda"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:layout_weight="1"
+            android:alpha = ".3"
+            android:id="@+id/carrier"/>
+
+    </LinearLayout>
+</LinearLayout>

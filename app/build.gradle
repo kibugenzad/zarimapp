@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "rw.limitless.limitlessapps.ussd"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        jackOptions {
+            enabled false
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    compile 'com.github.blennerSilva:AwesomeDialog:2.0.5'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.github.xingstarx:country-picker-android:1.1.8'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.github.eminsr:AwesomeDialog:master-SNAPSHOT'
+    compile 'com.google.android.gms:play-services:11.8.0'
+    compile 'com.android.support:design:26.0.+'
+    compile 'com.wrapp.floatlabelededittext:library:0.0.6'
+    compile 'com.alihafizji.creditcardedittext:library:+@aar'
+    compile 'com.droidninja:filepicker:2.1.1'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC0'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'commons-codec:commons-codec:1.10'
+    compile 'commons-io:commons-io:2.6'
+    compile 'com.github.clans:fab:1.6.4'
+    compile 'com.google.firebase:firebase-firestore:11.8.0'
+    testCompile 'junit:junit:4.12'
+}
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="8dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back"
+                    android:id="@+id/back"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="15dp">
+
+                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="MTN Rwanda"
+                    android:id="@+id/titleviewpage"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="center_vertical">
+
+                    <rw.limitless.limitlessapps.ussd.Textview_Bold
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Add"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        android:textSize="12dp"
+                        android:paddingLeft="7dp"
+                        android:id="@+id/addservice"
+                        android:layout_gravity="end"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/roun_rect_gray"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="10dp"
+                android:hint="Search favorite.."
+                android:padding="6dp"
+                android:textColor="@color/buttongray"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_services"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

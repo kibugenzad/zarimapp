@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="rw.limitless.limitlessapps.ussd.ClientProfile"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:paddingRight="10dp"
+        android:background="@color/whitedark">
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/button_circle"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back"
+                android:id="@+id/back"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="15dp">
+
+            <rw.limitless.limitlessapps.ussd.Textview_Bold
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Profile"
+                android:id="@+id/titleviewpage"
+                android:textColor="@color/black"
+                android:textSize="18dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:layout_gravity="center_vertical">
+
+                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Edit"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:textSize="12dp"
+                    android:paddingLeft="7dp"
+                    android:id="@+id/operatorname"
+                    android:layout_gravity="end"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/whitedark">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/simcard"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/darker_gray"
+                    android:paddingBottom="10dp"/>
+
+                <rw.limitless.limitlessapps.ussd.Textview_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MTN Rwanda"
+                    android:gravity="center"
+                    android:textColor="@color/buttongray"
+                    android:textSize="18dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="15dp">
+
+                        <LinearLayout
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/person_circle_colored"
+                            android:layout_marginRight="10dp"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/client_info"
+                                android:id="@+id/info"/>
+
+                        </LinearLayout>
+
+                        <rw.limitless.limitlessapps.ussd.Textview_Bold
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="info"
+                            android:textColor="@color/button_action_color"
+                            android:paddingTop="3dp"
+                            android:textSize="10dp"
+                            android:textStyle="bold"
+                            android:paddingLeft="6dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/person_circle_colored"
+                            android:layout_marginRight="10dp"
+                            android:padding="6dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/search_white"
+                                android:id="@+id/services"/>
+
+                        </LinearLayout>
+
+                        <rw.limitless.limitlessapps.ussd.Textview_Bold
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="services"
+                            android:textColor="@color/button_action_color"
+                            android:paddingTop="3dp"
+                            android:textSize="10dp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <rw.limitless.limitlessapps.ussd.Textview_Bold
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Our Services"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/simcard"
+                            app:civ_border_width="1dp"
+                            app:civ_border_color="@color/darker_gray"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/details"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="15dp">
+
+                                    <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="Buy Airtime"
+                                        android:textColor="@color/buttongray"
+                                        android:textSize="16dp"
+                                        android:paddingBottom="5dp"/>
+
+                                    <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="MTN Rwanda"
+                                        android:textColor="@color/text_black_grey"
+                                        android:textSize="12dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/info_outline"
+                                        android:background="@android:color/transparent"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/darker_gray"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/simcard"
+                            app:civ_border_width="1dp"
+                            app:civ_border_color="@color/darker_gray"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/details"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="15dp">
+
+                                    <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="Buy Electricity"
+                                        android:textColor="@color/buttongray"
+                                        android:textSize="16dp"
+                                        android:paddingBottom="5dp"/>
+
+                                    <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="MTN Rwanda"
+                                        android:textColor="@color/text_black_grey"
+                                        android:textSize="12dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/info_outline"
+                                        android:background="@android:color/transparent"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/darker_gray"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/simcard"
+                            app:civ_border_width="1dp"
+                            app:civ_border_color="@color/darker_gray"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/details"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="15dp">
+
+                                    <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="Buy Start times"
+                                        android:textColor="@color/buttongray"
+                                        android:textSize="16dp"
+                                        android:paddingBottom="5dp"/>
+
+                                    <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="MTN Rwanda"
+                                        android:textColor="@color/text_black_grey"
+                                        android:textSize="12dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/info_outline"
+                                        android:background="@android:color/transparent"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/darker_gray"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/simcard"
+                            app:civ_border_width="1dp"
+                            app:civ_border_color="@color/darker_gray"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/details"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="15dp">
+
+                                    <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="Send Airtimes"
+                                        android:textColor="@color/buttongray"
+                                        android:textSize="16dp"
+                                        android:paddingBottom="5dp"/>
+
+                                    <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="MTN Rwanda"
+                                        android:textColor="@color/text_black_grey"
+                                        android:textSize="12dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/info_outline"
+                                        android:background="@android:color/transparent"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/darker_gray"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/simcard"
+                            app:civ_border_width="1dp"
+                            app:civ_border_color="@color/darker_gray"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/details"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="15dp">
+
+                                    <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="Check balance"
+                                        android:textColor="@color/buttongray"
+                                        android:textSize="16dp"
+                                        android:paddingBottom="5dp"/>
+
+                                    <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="MTN Rwanda"
+                                        android:textColor="@color/text_black_grey"
+                                        android:textSize="12dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/info_outline"
+                                        android:background="@android:color/transparent"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/darker_gray"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/simcard"
+                            app:civ_border_width="1dp"
+                            app:civ_border_color="@color/darker_gray"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/details"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="15dp">
+
+                                    <rw.limitless.limitlessapps.ussd.Textview_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="Borrow money"
+                                        android:textColor="@color/buttongray"
+                                        android:textSize="16dp"
+                                        android:paddingBottom="5dp"/>
+
+                                    <rw.limitless.limitlessapps.ussd.TextView_Medium
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="BK Rwanda"
+                                        android:textColor="@color/text_black_grey"
+                                        android:textSize="12dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/info_outline"
+                                        android:background="@android:color/transparent"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/darker_gray"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
